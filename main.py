@@ -3,6 +3,7 @@ import os
 
 # call get audio visual 
 cmd = "python generation_scripts/run_tdw/get_audio_visual.py"
+
 os.system(cmd)
 
 

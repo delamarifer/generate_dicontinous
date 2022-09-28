@@ -41,13 +41,12 @@ for length in range(2):
         # '_' + str(ast.literal_eval(configs['change_mat_mid'])[changemat]) + \
         # '_' + str(ast.literal_eval(configs['cube_size'])[cubesize])
 
-        demoname = "stimuli/" + short_long_names[length] + cont_names[cont] + "_" + str(forward_back[motion])
+        demoname = "stimuli/" + short_long_names[length] + cont_names[cont] 
 
         cmd =  'python3 /Users/mdelatorre/Developer/tdw/Python/example_controllers/audio_scrapes/' + configs['file_name'] + \
         ' --demotype ' +  str(demoname)  + \
         ' --scrape_length ' +  str(length)  + \
         ' --waiter_time ' +  str(pause_length)  + \
-        ' --motion_dir ' +  str(forward_back[motion])  + \
         ' --audiovisual ' + str(ast.literal_eval(configs['audiovisual'])) + \
         ' --mass ' + str(ast.literal_eval(configs['mass'])[mass1]) + \
         ' --secondmass ' + str(ast.literal_eval(configs['secondmass'])[mass2]) + \
