@@ -9,7 +9,8 @@ for vidfile in os.listdir(imgs_dir):
         if os.path.join(imgs_dir, vidfile).endswith(".mp4") and os.path.join(sound_dir, audiofile).endswith(".wav"):
            
             out_name = imgs_dir2 + vidfile.replace(".mp4","") + "_" + audiofile.replace(".wav","") + ".mp4"
-            cmd = "ffmpeg -i " +  imgs_dir + vidfile + " -i " + sound_dir + audiofile + " -c:v copy -c:a aac  " + out_name
+            # ffmpeg -i video.mp4 -i audio.wav -c:v copy -c:a aac -map 0:v:0 -map 1:a:0 output.mp4
+            cmd = "ffmpeg -i " +  imgs_dir + vidfile + " -i " + sound_dir + audiofile + " -c:v copy -c:a aac -map 0:v:0 -map 1:a:0 " + out_name
 
             # ffmpeg -i "movie.mp4" -itsoffset 3.84 -i "movie.mp4" -map 0:v -map 1:a -c copy "movie-audio-delayed.mp4"
 

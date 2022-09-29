@@ -13,8 +13,8 @@ os.mkdir(path)
 cmd = "python generation_scripts/run_tdw/get_tdw_sound.py"
 os.system(cmd)
 
-cmd = "python generation_scripts/run_tdw/get_tdw_images.py"
-os.system(cmd)
+# cmd = "python generation_scripts/run_tdw/get_tdw_images.py"
+# os.system(cmd)
 
 
 

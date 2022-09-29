@@ -22,7 +22,7 @@ cont2 = 0
 mass2 = 0
 mass1 = 0
 scrape1 = 0
-pause_length = 20000
+pause_length = 12000
 
 
 # for motion in range(2):
@@ -40,7 +40,9 @@ for length in range(2):
         # '_' + str(ast.literal_eval(configs['change_mass_mid'])[changemass]) + \
         # '_' + str(ast.literal_eval(configs['change_mat_mid'])[changemat]) + \
         # '_' + str(ast.literal_eval(configs['cube_size'])[cubesize])
-
+        if short_long_names[length] == "long_":
+            print("allo")
+            pause_length = 2000
         demoname = "stimuli/" + short_long_names[length] + cont_names[cont] 
 
         cmd =  'python3 /Users/mdelatorre/Developer/tdw/Python/example_controllers/audio_scrapes/' + configs['file_name'] + \

@@ -3,8 +3,8 @@ import os
 imgs_dir2 = "output_stimuli/final_stimuli/"
 for vidfile in os.listdir(imgs_dir2):
      if os.path.join(imgs_dir2, vidfile).endswith(".mp4"):
-        cmd = "ffmpeg -i " + os.path.join(imgs_dir2, vidfile) + " -itsoffset 1.2 -i " + os.path.join(imgs_dir2, vidfile) + " -map 1:v -map 0:a -vcodec copy -acodec copy " +  imgs_dir2 + "delayed_" + vidfile
-        # cmd = "ffmpeg -i " + os.path.join(imgs_dir2, vidfile) + " loop=60:1:0, setpts=N/FRAME_RATE/TB -vcodec copy -acodec copy " +  imgs_dir2 + "delayed_" + vidfile
-        # cmd = "ffmpeg -i " +  os.path.join(imgs_dir2, vidfile) + ' -filter_complex "loop=loop=15:size=1:start=0" ' + "looped/looped_" + vidfile
-        os.system(cmd)
-        print(cmd)
+      #   cmd = "ffmpeg -i " + os.path.join(imgs_dir2, vidfile) + " -itsoffset 1.2 -i " + os.path.join(imgs_dir2, vidfile) + " -map 1:v -map 0:a -vcodec copy -acodec copy " +  imgs_dir2 + "delayed_" + vidfile
+      # cmd = "ffmpeg -i " + os.path.join(imgs_dir2, vidfile) + " loop=60:1:0, setpts=N/FRAME_RATE/TB -vcodec copy -acodec copy " +  imgs_dir2 + "delayed_" + vidfile
+      cmd = "ffmpeg -i " +  os.path.join(imgs_dir2, vidfile) + ' -filter_complex "loop=loop=15:size=1:start=0" ' +  imgs_dir2 + "delayed_" + vidfile
+      os.system(cmd)
+      print(cmd)
